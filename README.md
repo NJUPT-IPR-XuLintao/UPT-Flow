@@ -31,9 +31,9 @@ Pre-trained models for 6 datasets can be obtained from [Google Cloud Drive](http
 ```python
 #### Test Settings
 dataroot_unpaired: 
-dataroot_GT: Put high-light images  
-dataroot_LR: Put low-light images
-model_path: Put pre-trained model
+dataroot_GT: put high-light images  
+dataroot_LR: put low-light images
+model_path: put pre-trained model
 ```
 
 2、Test the model

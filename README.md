@@ -69,7 +69,7 @@ We achieved state-of-the-art performance on *low-light image enhancement*, *nigh
  
   </details>
 
-## 🔍 Concat
+## Concat
 
 If you have any questions, please feel free to contact me via email at lintao_xu@163.com.
 

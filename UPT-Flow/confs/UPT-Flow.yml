@@ -1,0 +1,126 @@
+#### general settings
+name: LOL
+# name: no-delay-batch16_patch160_L_3_iter3W_gaussianNoise5Prob0_ModifiedConEncoder1_noSplit_nb16_concat_histeq_logLow_EncoderGammaCurve
+
+use_tb_logger: true
+model: UPTFlow
+distortion: sr
+scale: 1
+gpu_ids: [0]
+dataset: LoL_v2
+optimize_all_z: false
+cond_encoder: ConEncoder1
+train_gt_ratio: 0.5
+avg_color_map: false
+
+concat_histeq: false # noted!!!
+histeq_as_input: false
+concat_color_map: false
+gray_map: false # concat 1-input.mean(dim=1) to the input
+
+align_condition_feature: false
+align_weight: 0.001
+align_maxpool: true
+
+to_yuv: false
+
+pad_factor: 8
+encode_color_map: false
+
+le_curve: false
+# sigmoid_output: true
+
+#### datasets
+datasets:
+  train:
+    # name: LoL
+    root: E:\TAO\Dataset\SID # E:\TAO\Dataset\LOLv2  E:\TAO\Dataset\LOLv2-Syn  E:\TAO\Dataset\MIT_PNG  E:\TAO\Dataset\SID
+    quant: 32
+    use_shuffle: true
+    n_workers: 0   # per GPU
+    batch_size: 8 # 12
+    use_flip: true
+    color: RGB
+    use_crop: true
+    GT_size: 160 # 192
+    noise_prob: 0
+    noise_level: 5
+    log_low: false # node!!!
+
+  val:
+    root: E:\TAO\Dataset\SID  #  E:\TAO\Dataset\LOLv2-Syn\Test\high   E:\TAO\Dataset\LOLv2-Syn\Test\low
+    n_workers: 0
+    quant: 32
+    n_max: 20
+    batch_size: 1 # must be 1
+    log_low: false # node!!!
+
+#### Test Settings
+dataroot_unpaired: E:\TAO\Dataset\5Unpaired\DICM
+dataroot_GT: F:\datasets\LOL689\Test\B    # E:\TAO\Dataset\LOLv2\Test\high  E:\TAO\Dataset\MIT_PNG\Test\high
+dataroot_LR: F:\datasets\LOL689\Test\A    # E:\TAO\Dataset\LOLv2\Test\low  E:\TAO\Dataset\MIT_PNG\Test\low
+model_path: D:\LLflow_different_V\Github\bestModel\LOL-real.pth
+heat: 0 # This is the standard deviation of the latent vectors
+
+#### network structures
+network_G:
+  which_model_G: UPTFlow
+  in_nc: 3
+  out_nc: 3
+  nf: 64
+  nb: 24 #  12 for our low light encoder, 23 for LLFlow
+  train_RRDB: false
+  train_RRDB_delay: 0.5
+
+  flow:
+    K: 8
+    L: 3 # 4
+    noInitialInj: true
+    coupling: CondAffineSeparatedAndCond
+    additionalFlowNoAffine: 2
+    split:
+      enable: false
+    fea_up0: true
+    stackRRDB:
+      blocks: [ 1, 3, 5, 7 ]
+      concat: true
+
+#### path
+path:
+  strict_load: true
+  resume_state: auto
+
+#### training settings: learning rate scheme, loss
+train:
+  manual_seed: 10
+  lr_G: !!float 2e-4
+  weight_decay_G: 0 #1e-5 # 1e-5 # 5e-5 # 1e-5
+  beta1: 0.9
+  beta2: 0.99
+  lr_scheme: MultiStepLR
+  warmup_iter: 800  # no warm up
+  lr_steps_rel: [ 0.4, 0.6, 0.8, 0.9] # [0.2, 0.35, 0.5, 0.65, 0.8, 0.95]  # [ 0.5, 0.75, 0.9, 0.95 ]
+
+  lr_gamma: 0.5
+
+  weight_l1: 0
+  # flow_warm_up_iter: -1
+  weight_fl: 1
+
+  niter: 50000 #200000
+  val_freq: 500
+
+#### validation settings
+val:
+  # heats: [ 0.0, 0.5, 0.75, 1.0 ]
+  n_sample: 4
+
+test:
+  heats: [ 0.0, 0.7, 0.8, 0.9 ]
+
+#### logger
+logger:
+  # Debug print_freq: 100
+  print_freq: 500
+  save_checkpoint_freq: !!float 1e3
+

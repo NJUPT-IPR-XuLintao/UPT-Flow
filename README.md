@@ -33,35 +33,38 @@ We achieved state-of-the-art performance on *low-light image enhancement*, *nigh
 <details>
 <summary>Quantitative Comparison (click to expan)</summary>
 
-- Results in Table 1 of the main paper
+
   <p align="center">
-  <img width="900" src="figs/table-1.png">
+  <img width="900" src="figs/table1.png">
 	</p>
-- Results in Table 2-3 of the main paper
+
   <p align="center">
-  <img width="900" src="figs/table-2-3.png">
-	</p>
-- Results in Table 6-9 of the main paper
+  <img width="500" src="figs/table2.png">
+
   <p align="center">
-  <img width="900" src="figs/table-6-7-8-9.png">
+  <img width="500" src="figs/table3.png">
 	</p>
-  </details>
+
 
 <details>
 <summary>Visual Comparison (click to expan)</summary>
 
-- Results in Figure 3 of the main paper
   <p align="center">
-  <img width="900" src="figs/llie.jpeg">
+  <img width="900" src="figs/fig6.png">
 	</p>
-- Results in Figure 4 of the main paper
+
   <p align="center">
-  <img width="900" src="figs/uie.jpeg">
+  <img width="900" src="figs/fig7.png">
 	</p>
-- Results in Figure 5 of the main paper
+
   <p align="center">
-  <img width="900" src="figs/backlit.jpeg">
+  <img width="900" src="figs/fig8.png">
 	</p>
+
+   <p align="center">
+  <img width="900" src="figs/fig11.png">
+	</p>
+ 
   </details>
 
 ## 🔍 Concat

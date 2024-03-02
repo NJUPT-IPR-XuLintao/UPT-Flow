@@ -86,44 +86,9 @@ class UPTFlow(nn.Module):
                                              add_gt_noise=add_gt_noise)
 
     def normal_flow(self, gt, lr, zc,y_onehot=None, epses=None, lr_enc=None, add_gt_noise=True):
-        if self.opt['to_yuv']:
-            gt = self.rgb2yuv(gt)
 
-        if lr_enc is None and self.RRDB:
-            lr_enc = self.rrdbPreprocessing(lr,zc)  ####跳转
-
-        logdet = torch.zeros_like(gt[:, 0, 0, 0])
-        pixels = thops.pixels(gt)
-
-        z = gt
-
-        if add_gt_noise:
-            # Setup
-            noiseQuant = opt_get(self.opt, ['network_G', 'flow', 'augmentation', 'noiseQuant'], True)
-            if noiseQuant:
-                z = z + ((torch.rand(z.shape, device=z.device) - 0.5) / self.quant)
-            logdet = logdet + float(-np.log(self.quant) * pixels)
-
-        epses, logdet = self.flowUpsamplerNet(rrdbResults=lr_enc, gt=z, logdet=logdet, reverse=False, epses=epses,
-                                      y_onehot=y_onehot)
-
-        objective = logdet.clone()
-
-        z = epses
-        objective = objective + flow.GaussianDiag.logp(None, None, z)
-        nll = (-objective) / float(np.log(2.) * pixels)
-
-        if self.opt['encode_color_map']:
-            color_map = self.color_map_encoder(lr)
-            color_gt = nn.functional.avg_pool2d(gt, 11, 1, 5)
-            color_gt = color_gt / torch.sum(color_gt, 1, keepdim=True)
-            color_loss = (color_gt - color_map).abs().mean()
-            nll = nll + color_loss
-
-        if isinstance(epses, list):
-            return epses, nll, logdet
-        return z, nll, logdet
-
+        pass
+        
     def rrdbPreprocessing(self, lr,zc):
 
         rrdbResults = self.RRDB(lr,zc)

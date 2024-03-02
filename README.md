@@ -1,6 +1,6 @@
 # UPT-Flow: Multi-Scale Transformer-Guided Normalizing Flow for Low-Light Image Enhancement
 
-This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transformer-Guided Normalizing Flow for Low-Light Image Enhancement". The paper has been submitted for review to Information Fusion.
+This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transformer-Guided Normalizing Flow for Low-Light Image Enhancement". The paper has been submitted for review.
 
 #### 🔥🔥🔥 
 
@@ -10,10 +10,6 @@ This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transfo
 ![](figs/framework.jpeg)
 
 
-
-## 🔧 Todo
-
-- [ ] Complete this repository
 
 
 
@@ -26,6 +22,8 @@ This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transfo
 - [x] [Acknowledgements](https://github.com/ChunmingHe/Reti-Diff/blob/main/README.md#-acknowledgements)
 
 ## 🔍 Datasets
+
+
 
 ## 🔍 Testing
 
@@ -68,7 +66,9 @@ We achieved state-of-the-art performance on *low-light image enhancement*, *nigh
 	</p>
   </details>
 
+## 🔍 Concat
 
+If you have any questions, please feel free to contact me via email at lintao_xu@163.com.
 
 ## 💡 Acknowledgements
 The codes are based on [LLFlow](https://github.com/wyf0912/LLFlow), [Restormer](https://github.com/swz30/Restormer), and [Uformer](https://github.com/ZhendongWang6/Uformer). Please also follow their licenses. Thanks for their awesome works.

@@ -25,6 +25,7 @@ This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transfo
 
 ## 🔍 Testing
 
+Pre-trained models for 6 datasets can be obtained from [Google Cloud Drive](https://drive.google.com/drive/folders/1kc1gYk3oTNkV-wZuqUjcZDNbZXqwq5Np?usp=sharing)
 
 ## 🔍 Results
 

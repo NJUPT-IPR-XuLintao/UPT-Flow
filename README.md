@@ -27,6 +27,10 @@ This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transfo
 
 Pre-trained models for 6 datasets can be obtained from [Google Cloud Drive](https://drive.google.com/drive/folders/1kc1gYk3oTNkV-wZuqUjcZDNbZXqwq5Np?usp=sharing)
 
+https://github.com/NJUPT-IPR-XuLintao/UPT-Flow/blob/271bf24fea0cf51bf3aa27b22a9eea5ab85d2a3b/UPT-Flow/confs/UPT-Flow.yml#L62
+
+
+
 ## 🔍 Results
 
 We achieved state-of-the-art performance on *low-light image enhancement*, *night traffic monitoring enhancement*, *low-light object detection* and *Nighttime semantic segmentation*. More results can be found in the paper.

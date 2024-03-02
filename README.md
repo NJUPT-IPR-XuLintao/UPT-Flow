@@ -43,6 +43,7 @@ To test the model with paired data and obtain the evaluation results, e.g., PSNR
 test.py 
 ```
 
+Note that for the LOL datasets, set the window size to 5, and for the remaining libraries, set it to 8. See
 
 ## 🔍 Results
 

@@ -43,8 +43,7 @@ To test the model with paired data and obtain the evaluation results, e.g., PSNR
 test.py 
 ```
 
-Note that for the LOL datasets, set the window_size to 5, and for the remaining datasets, set it to 8. See 
-
+Note that for the LOL datasets, set the window_size to 5, and for the remaining datasets, set it to 8. See [Lowlight_Encoder](https://github.com/NJUPT-IPR-XuLintao/UPT-Flow/blob/77f391d6b5eb64b2d702c26a782fd70a71c75af4/UPT-Flow/models/modules/Lowlight_Encoder.py#L727)
                  win_size=5, drop_path_rate=0.1, token_projection='conv', token_mlp='leff', shift_flag=True):
 
 ## 🔍 Results

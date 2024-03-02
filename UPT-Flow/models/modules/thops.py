@@ -1,6 +1,5 @@
 import torch
 
-
 def sum(tensor, dim=None, keepdim=False):
     if dim is None:
         # sum up all dim
@@ -32,7 +31,7 @@ def mean(tensor, dim=None, keepdim=False):
                 tensor.squeeze_(d-i)
         return tensor
 
-######重要
+
 def split_feature(tensor, type="split"):
     """
     type = ["split", "cross"]
@@ -43,10 +42,10 @@ def split_feature(tensor, type="split"):
     elif type == "cross":
         return tensor[:, 0::2, ...], tensor[:, 1::2, ...]
 
-###有用
+
 def cat_feature(tensor_a, tensor_b):
     return torch.cat((tensor_a, tensor_b), dim=1)
 
-###有用
+
 def pixels(tensor):
     return int(tensor.size(2) * tensor.size(3))

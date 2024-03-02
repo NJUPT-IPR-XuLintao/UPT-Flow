@@ -11,9 +11,9 @@ This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transfo
 
 - [x] Datasets
 - [ ] Training
-- [x] Testing
-- [x] [Results](https://github.com/ChunmingHe/Reti-Diff/blob/main/README.md#-results)
-- [x] [Acknowledgements](https://github.com/ChunmingHe/Reti-Diff/blob/main/README.md#-acknowledgements)
+- [x] [Testing](https://github.com/NJUPT-IPR-XuLintao/UPT-Flow/edit/main/README.md#-testing)
+- [x] [Results](https://github.com/NJUPT-IPR-XuLintao/UPT-Flow/edit/main/README.md#-results)
+- [x] [Acknowledgements](https://github.com/NJUPT-IPR-XuLintao/UPT-Flow/edit/main/README.md#-acknowledgements)
 
 ## 🔍 Datasets
 

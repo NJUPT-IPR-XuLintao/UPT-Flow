@@ -19,17 +19,20 @@ This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transfo
 
 ## 🔗 Contents
 
-- [ ] Datasets
+- [x] Datasets
 - [ ] Training
-- [ ] Testing
+- [x] Testing
 - [x] [Results](https://github.com/ChunmingHe/Reti-Diff/blob/main/README.md#-results)
 - [x] [Acknowledgements](https://github.com/ChunmingHe/Reti-Diff/blob/main/README.md#-acknowledgements)
 
+## 🔍 Datasets
+
+## 🔍 Testing
 
 
 ## 🔍 Results
 
-We achieved state-of-the-art performance on *low light image enhancement*, *underwater image enhancement*, *backlit image enhancement* and corresponding downstream tasks. More results can be found in the paper.
+We achieved state-of-the-art performance on *low-light image enhancement*, *night traffic monitoring enhancement*, *low-light object detection* and "Nighttime semantic segmentation". More results can be found in the paper.
 
 <details>
 <summary>Quantitative Comparison (click to expan)</summary>
@@ -68,6 +71,6 @@ We achieved state-of-the-art performance on *low light image enhancement*, *unde
 
 
 ## 💡 Acknowledgements
-The codes are based on [LLFlow]([https://github.com/XPixelGroup/BasicSR](https://github.com/wyf0912/LLFlow)), [Restormer](https://github.com/swz30/Restormer), and [Uformer]([https://github.com/Zj-BinXia/DiffIR](https://github.com/ZhendongWang6/Uformer)). Please also follow their licenses. Thanks for their awesome works.
+The codes are based on [LLFlow](https://github.com/wyf0912/LLFlow), [Restormer](https://github.com/swz30/Restormer), and [Uformer](https://github.com/ZhendongWang6/Uformer). Please also follow their licenses. Thanks for their awesome works.
 
 

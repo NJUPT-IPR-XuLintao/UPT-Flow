@@ -1,6 +1,4 @@
 
-
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -84,7 +82,7 @@ class GaussianDiag:
             return -0.5 * (x ** 2 + GaussianDiag.Log2PI)
         else:
             return -0.5 * (logs * 2. + ((x - mean) ** 2) / torch.exp(logs * 2.) + GaussianDiag.Log2PI)
-########有用
+
     @staticmethod
     def logp(mean, logs, x):
         likelihood = 0
@@ -144,7 +142,7 @@ def unsqueeze2d(input, factor=2):
     x = x.view(B, C // (factor2), H * factor, W * factor)
     return x
 
-######重要
+
 class SqueezeLayer(nn.Module):
     def __init__(self, factor):
         super().__init__()

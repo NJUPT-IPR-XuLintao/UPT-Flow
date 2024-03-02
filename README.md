@@ -44,10 +44,11 @@ We achieved state-of-the-art performance on *low-light image enhancement*, *nigh
   <p align="center">
   <img width="500" src="figs/table3.png">
 	</p>
-
+  </details>
 
 <details>
 <summary>Visual Comparison (click to expan)</summary>
+
 
   <p align="center">
   <img width="900" src="figs/fig6.png">

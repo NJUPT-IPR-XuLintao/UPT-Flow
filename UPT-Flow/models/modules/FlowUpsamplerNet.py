@@ -29,7 +29,7 @@ class FlowUpsamplerNet(nn.Module):
             self.K = [K for K in [K, ] * (self.L + 1)]
 
         self.opt = opt
-        H, W, self.C = image_shape###############留意
+        H, W, self.C = image_shape
         self.check_image_shape()
 
         self.levelToName = {
@@ -139,7 +139,7 @@ class FlowUpsamplerNet(nn.Module):
                     [-1, self.C, H, W])
 
     def arch_squeeze(self, H, W):
-        self.C, H, W = self.C * 4, H // 2, W // 2 ######self.C在这里改变了
+        self.C, H, W = self.C * 4, H // 2, W // 2 
         self.layers.append(flow.SqueezeLayer(factor=2))
         self.output_shapes.append([-1, self.C, H, W])
 
@@ -184,16 +184,16 @@ class FlowUpsamplerNet(nn.Module):
             if level > 0 and level not in level_conditionals.keys():
                 if rrdbResults is None:
                     level_conditionals[level] = None
-                else:#分别是
+                else:
                     #fFeatures_firstConv[level]=self.fFeatures_firstConv[level]
                     level_conditionals[level] = rrdbResults[self.levelToName[level]]#{1: 'fea_up2', 2: 'fea_up1', 3: 'fea_up0'}
-            ###layer会进入FlowStep的71行的self.normal_flow
+
             if isinstance(layer, FlowStep):
                 fl_fea, logdet = layer(fl_fea, logdet, reverse=reverse, rrdbResults=level_conditionals[level])
             elif isinstance(layer, Split2d):
                 fl_fea, logdet = self.forward_split2d(epses, fl_fea, layer, logdet, reverse, level_conditionals[level],
                                                       y_onehot=y_onehot)
-            else:#fl_fea=input=gt= 3，192，192 -> 12,96,96 -> 48,48,48 -> 192,24,24，通道数*4，hw/2
+            else:#fl_fea=input=gt= 3，192，192 -> 12,96,96 -> 48,48,48 -> 192,24,24，
                 fl_fea, logdet = layer(fl_fea, logdet, reverse=reverse)
 #SqueezeLayer():8,3,192,192=gt->FlowStep*14->SqueezeLayer():8,48,48,48->FlowStep*14->SqueezeLayer():8,192,24,24->FlowStep*14
         #z=8,192,24,24
@@ -235,7 +235,7 @@ class FlowUpsamplerNet(nn.Module):
             if level > 0 and level not in level_conditionals.keys():
                 if rrdbResults is None:
                     level_conditionals[level] = None
-                else:#分别是
+                else:
                     #fFeatures_firstConv[level]=self.fFeatures_firstConv[level]
                     level_conditionals[level] = rrdbResults[self.levelToName[level]]#{1: 'fea_up2', 2: 'fea_up1', 3: 'fea_up0'}
             if isinstance(layer, Split2d):

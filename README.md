@@ -1,6 +1,6 @@
 # UPT-Flow: Multi-Scale Transformer-Guided Normalizing Flow for Low-Light Image Enhancement
 
-[Chunming He](https://chunminghe.github.io/), [Chenyu Fang](https://chengyufang.tech/), [Yulun Zhang](https://yulunzhang.com), [Kai Li](https://kailigo.github.io), Longxiang Tang, [Chengyu You](http://chenyuyou.me), Fengyang Xiao, Zhenhua Guo and Xiu Li, "Reti-Diff: Illumination Degradation Image Restoration with Retinex-based Latent Diffusion Model", arXiv, 2023 [[arXiv]](https://arxiv.org/abs/2311.11638)
+This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transformer-Guided Normalizing Flow for Low-Light Image Enhancement". The paper has been submitted for review to Information Fusion.
 
 #### 🔥🔥🔥 
 
@@ -23,7 +23,6 @@
 - [ ] Training
 - [ ] Testing
 - [x] [Results](https://github.com/ChunmingHe/Reti-Diff/blob/main/README.md#-results)
-- [x] [Citation](https://github.com/ChunmingHe/Reti-Diff/blob/main/README.md#-citation)
 - [x] [Acknowledgements](https://github.com/ChunmingHe/Reti-Diff/blob/main/README.md#-acknowledgements)
 
 
@@ -67,22 +66,8 @@ We achieved state-of-the-art performance on *low light image enhancement*, *unde
   </details>
 
 
-## 📎 Citation
-
-If you find the code helpful in your resarch or work, please cite the following paper(s).
-
-```
-@article{he2023retidiff,
-      title={Reti-Diff: Illumination Degradation Image Restoration with Retinex-based Latent Diffusion Model}, 
-      author={Chunming He and Chengyu Fang and Yulun Zhang and Kai Li and Longxiang Tang and Chenyu You and Fengyang Xiao and Zhenhua Guo and Xiu Li},
-      year={2023},
-      eprint={2311.11638},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
 
 ## 💡 Acknowledgements
-The codes are based on [BasicSR](https://github.com/XPixelGroup/BasicSR), [Restormer](https://github.com/swz30/Restormer), and [DiffIR](https://github.com/Zj-BinXia/DiffIR). Please also follow their licenses. Thanks for their awesome works.
+The codes are based on [LLFlow]([https://github.com/XPixelGroup/BasicSR](https://github.com/wyf0912/LLFlow)), [Restormer](https://github.com/swz30/Restormer), and [Uformer]([https://github.com/Zj-BinXia/DiffIR](https://github.com/ZhendongWang6/Uformer)). Please also follow their licenses. Thanks for their awesome works.
 
 

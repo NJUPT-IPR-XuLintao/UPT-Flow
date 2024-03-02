@@ -40,7 +40,7 @@ model_path: Put pre-trained model
 
 To test the model with paired data and obtain the evaluation results, e.g., PSNR, SSIM, and LPIPS. You need to specify the data path ```dataroot_LR```, ```dataroot_GT```, and model path ```model_path``` in the config file. Then run
 ```bash
-python test.py 
+test.py 
 ```
 
 

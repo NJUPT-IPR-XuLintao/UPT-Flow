@@ -12,7 +12,7 @@ def getConditional(rrdbResults, position):
     img_ft = rrdbResults if isinstance(rrdbResults, torch.Tensor) else rrdbResults[position]
     return img_ft
 
-#####重要
+
 class FlowStep(nn.Module):
     FlowPermutation = {
         "reverse": lambda obj, z, logdet, rev: (obj.reverse(z, rev), logdet),

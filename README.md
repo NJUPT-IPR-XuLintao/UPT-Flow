@@ -27,8 +27,22 @@ This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transfo
 
 Pre-trained models for 6 datasets can be obtained from [Google Cloud Drive](https://drive.google.com/drive/folders/1kc1gYk3oTNkV-wZuqUjcZDNbZXqwq5Np?usp=sharing)
 
-https://github.com/NJUPT-IPR-XuLintao/UPT-Flow/blob/271bf24fea0cf51bf3aa27b22a9eea5ab85d2a3b/UPT-Flow/confs/UPT-Flow.yml#L62
+1、Modify the paths to dataset and pre-trained mode. You need to modify the following path in the config files in `./confs`
+```python
+#### Test Settings
+dataroot_unpaired: 
+dataroot_GT: Put high-light images  
+dataroot_LR: Put low-light images
+model_path: Put pre-trained model
+```
 
+2、Test the model
+
+To test the model with paired data and obtain the evaluation results, e.g., PSNR, SSIM, and LPIPS. You need to specify the data path ```dataroot_LR```, ```dataroot_GT```, and model path ```model_path``` in the config file. Then run
+```bash
+python test.py --opt your_config_path
+# You need to specify an appropriate config file since it stores the config of the model, e.g., the number of layers.
+```
 
 
 ## 🔍 Results

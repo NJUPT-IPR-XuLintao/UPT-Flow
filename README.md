@@ -29,7 +29,7 @@ Pre-trained models for 6 datasets can be obtained from [Google Cloud Drive](http
 
 ## 🔍 Results
 
-We achieved state-of-the-art performance on *low-light image enhancement*, *night traffic monitoring enhancement*, *low-light object detection* and "Nighttime semantic segmentation". More results can be found in the paper.
+We achieved state-of-the-art performance on *low-light image enhancement*, *night traffic monitoring enhancement*, *low-light object detection* and *Nighttime semantic segmentation*. More results can be found in the paper.
 
 <details>
 <summary>Quantitative Comparison (click to expan)</summary>

@@ -839,20 +839,18 @@ class MSFormer(nn.Module):
 
         out_enc_level1 = self.encoder_level1(inp_enc_level1)
         conv1 = self.encoderlayer_1(inp_enc_level1, zero_map=zero_map)
-        # 1,48,144,144
         x1 = out_enc_level1 + conv1
 
         inp_enc_level2 = self.down1_2(x1)
         zero_map_down1 = self.down1_2(zero_map)
         out_enc_level2 = self.encoder_level2(inp_enc_level2)
-        conv2 = self.encoderlayer_2(out_enc_level2, zero_map=zero_map_down1)  # 1,96,72,72
-        # conv2 = self.encoderlayer_2(inp_enc_level2, zero_map=zero_map_down1)  # 1,96,72,72
+        conv2 = self.encoderlayer_2(out_enc_level2, zero_map=zero_map_down1)  
         x2 = out_enc_level2 + conv2
 
         inp_enc_level3 = self.down2_3(x2)
         zero_map_down2 = self.down2_3(zero_map_down1)
         out_enc_level3 = self.encoder_level3(inp_enc_level3)
-        conv3 = self.encoderlayer_3(inp_enc_level3, zero_map=zero_map_down2)  # 1,192,36,36
+        conv3 = self.encoderlayer_3(inp_enc_level3, zero_map=zero_map_down2)  
         x3 = out_enc_level3 + conv3
 
         inp_enc_level4 = self.down3_4(x3)
@@ -863,7 +861,7 @@ class MSFormer(nn.Module):
 
         latent = latent + bottlen
 
-        # 1,348,18,18
+
         fea_up0 = self.reduce_chan_level0(latent)
         result['fea_up0'] = fea_up0
 
@@ -876,7 +874,7 @@ class MSFormer(nn.Module):
         up1 = self.decoderlayer_1(inp_dec_level3, zero_map=zero_map_up3)
 
         out_dec_level3 = out_dec_level3 + up1
-        # 1,192,36,36
+
         result['fea_up1'] = out_dec_level3
 
         inp_dec_level2 = self.up3_2(out_dec_level3)
@@ -888,7 +886,7 @@ class MSFormer(nn.Module):
         zero_map_up2 = zero_map_up2.repeat(1, 2, 1, 1)
         up2 = self.decoderlayer_2(inp_dec_level2, zero_map=zero_map_up2)
         out_dec_level2 = out_dec_level2 + up2
-        # 1,192,72,72
+
         result['fea_up2'] = out_dec_level2
 
         inp_dec_level1 = self.up2_1(out_dec_level2)
@@ -902,18 +900,9 @@ class MSFormer(nn.Module):
 
         out_dec_level0 = self.refinement(out_dec_level1)
         # out_dec_level0 = self.reduce_chan_level0(out_dec_level0)
-        # 1,96,144,144
+
         result['cat_f'] = out_dec_level0
 
-        #### For Dual-Pixel Defocus Deblurring Task ####
-        # if self.dual_pixel_task:#false
-        #     out_dec_level1 = out_dec_level1 + self.skip_conv(inp_enc_level1)
-        #     out_dec_level1 = self.output(out_dec_level1)
-        ###########################
-
-        # out = self.output(out_dec_level0) + inp_img
-        # # out = self.skip(out)
-        # result['color_map'] = out
 
         return result
 

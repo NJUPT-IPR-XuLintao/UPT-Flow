@@ -34,7 +34,7 @@ le_curve: false
 datasets:
   train:
     # name: LoL
-    root: E:\TAO\Dataset\SID # E:\TAO\Dataset\LOLv2  E:\TAO\Dataset\LOLv2-Syn  E:\TAO\Dataset\MIT_PNG  E:\TAO\Dataset\SID
+    root: E:\TAO\Dataset\SID # E:\TAO\Dataset\LOLv2  E:\TAO\Dataset\LOLv2-Syn    E:\TAO\Dataset\MIT
     quant: 32
     use_shuffle: true
     n_workers: 0   # per GPU
@@ -48,7 +48,7 @@ datasets:
     log_low: false # node!!!
 
   val:
-    root: E:\TAO\Dataset\SID  #  E:\TAO\Dataset\LOLv2-Syn\Test\high   E:\TAO\Dataset\LOLv2-Syn\Test\low
+    root: E:\TAO\Dataset\SID  #  E:\TAO\Dataset\LOLv2-Syn\Test\high   E:\TAO\Dataset\SMID
     n_workers: 0
     quant: 32
     n_max: 20
@@ -57,8 +57,8 @@ datasets:
 
 #### Test Settings
 dataroot_unpaired: E:\TAO\Dataset\5Unpaired\DICM
-dataroot_GT: F:\datasets\LOL689\Test\B    # E:\TAO\Dataset\LOLv2\Test\high  E:\TAO\Dataset\MIT_PNG\Test\high
-dataroot_LR: F:\datasets\LOL689\Test\A    # E:\TAO\Dataset\LOLv2\Test\low  E:\TAO\Dataset\MIT_PNG\Test\low
+dataroot_GT: F:\datasets\LOLv2-real\Test\high    # E:\TAO\Dataset\LOLv2\Test\high
+dataroot_LR: F:\datasets\LOLv2-real\Test\low    # E:\TAO\Dataset\LOLv2\Test\low
 model_path: D:\LLflow_different_V\Github\bestModel\LOL-real.pth
 heat: 0 # This is the standard deviation of the latent vectors
 

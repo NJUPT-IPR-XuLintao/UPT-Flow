@@ -93,6 +93,19 @@ We achieved state-of-the-art performance on *low-light image enhancement*, *nigh
 
 If you have any questions, please feel free to contact me via email at lintao_xu@163.com.
 
+## Citation
+If you find our work useful for your research, please cite our paper
+```
+@article{xu2024upt,
+  title={UPT-Flow: Multi-scale transformer-guided normalizing flow for low-light image enhancement},
+  author={Xu, Lintao and Hu, Changhui and Hu, Yin and Jing, Xiaoyuan and Cai, Ziyun and Lu, Xiaobo},
+  journal={Pattern Recognition},
+  pages={111076},
+  year={2024},
+  publisher={Elsevier}
+}
+```
+
 ## 💡 Acknowledgements
 The codes are based on [LLFlow](https://github.com/wyf0912/LLFlow), [Restormer](https://github.com/swz30/Restormer), and [Uformer](https://github.com/ZhendongWang6/Uformer). Please also follow their licenses. Thanks for their awesome works.
 

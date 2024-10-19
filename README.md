@@ -55,14 +55,12 @@ We achieved state-of-the-art performance on *low-light image enhancement*, *nigh
 
 
   <p align="center">
-  <img width="900" src="figs/table1.png">
+  <img width="900" src="figs/table1.jpg">
 	</p>
 
   <p align="center">
-  <img width="500" src="figs/table2.png">
+  <img width="500" src="figs/table2.jpg">
 
-  <p align="center">
-  <img width="500" src="figs/table3.png">
 	</p>
   </details>
 
@@ -71,19 +69,23 @@ We achieved state-of-the-art performance on *low-light image enhancement*, *nigh
 
 
   <p align="center">
-  <img width="900" src="figs/fig6.png">
+  <img width="900" src="figs/fig1.jpg">
 	</p>
 
   <p align="center">
-  <img width="900" src="figs/fig7.png">
+  <img width="900" src="figs/fig2.jpg">
 	</p>
 
   <p align="center">
-  <img width="900" src="figs/fig8.png">
+  <img width="900" src="figs/fig3.jpg">
 	</p>
 
    <p align="center">
-  <img width="900" src="figs/fig11.png">
+  <img width="900" src="figs/fig4.jpg">
+	</p>
+ 
+  <p align="center">
+  <img width="900" src="figs/fig5.jpg">
 	</p>
  
   </details>

@@ -25,7 +25,7 @@ This is the official PyTorch code for the paper "[[UPT-Flow: A Multi-Scale Trans
 
 ## 🔍 Testing
 
-Pre-trained models for 6 datasets can be obtained from [Google Cloud Drive](https://drive.google.com/drive/folders/1kc1gYk3oTNkV-wZuqUjcZDNbZXqwq5Np?usp=sharing)
+**Pre-trained models for 6 datasets can be obtained from [Google Cloud Drive](https://drive.google.com/drive/folders/1kc1gYk3oTNkV-wZuqUjcZDNbZXqwq5Np?usp=sharing)**
 
 1、Modify the paths to dataset and pre-trained mode. You need to modify the following path in the config files in `./confs`
 ```python

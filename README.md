@@ -61,7 +61,6 @@ We achieved state-of-the-art performance on *low-light image enhancement*, *nigh
   <p align="center">
   <img width="500" src="figs/table2.jpg">
 
-	</p>
   </details>
 
 <details>

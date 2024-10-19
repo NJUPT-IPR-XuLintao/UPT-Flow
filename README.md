@@ -1,6 +1,6 @@
 # UPT-Flow: Multi-Scale Transformer-Guided Normalizing Flow for Low-Light Image Enhancement
 
-This is the official PyTorch code for the paper "UPT-Flow: A Multi-Scale Transformer-Guided Normalizing Flow for Low-Light Image Enhancement". The paper has been submitted for review.
+This is the official PyTorch code for the paper "[[UPT-Flow: A Multi-Scale Transformer-Guided Normalizing Flow for Low-Light Image Enhancement]](https://www.sciencedirect.com/science/article/abs/pii/S0031320324008276)". This paper was published in Pattern Recognition.
 
 #### 🔥🔥🔥 
 

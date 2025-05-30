@@ -96,12 +96,13 @@ If you have any questions, please feel free to contact me via email at lintao_xu
 ## Citation
 If you find our work useful for your research, please cite our paper
 ```
-@article{xu2024upt,
+@article{xu2025upt,
   title={UPT-Flow: Multi-scale transformer-guided normalizing flow for low-light image enhancement},
   author={Xu, Lintao and Hu, Changhui and Hu, Yin and Jing, Xiaoyuan and Cai, Ziyun and Lu, Xiaobo},
   journal={Pattern Recognition},
+  volume={158},
   pages={111076},
-  year={2024},
+  year={2025},
   publisher={Elsevier}
 }
 ```
